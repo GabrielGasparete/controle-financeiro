@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f766e">
+  <title>Saúde Financeira | Controle Financeiro</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Saúde Financeira</h1>
+    <p>Entenda para onde vai o seu dinheiro</p>
+  </header>
+
+  <main class="container">
+    <!-- Painel de métricas (valores vindos de "metricas" da API) -->
+    <section class="metricas" aria-label="Painel de métricas">
+      <article class="card card--saldo" id="card-saldo">
+        <span class="card__rotulo">Saldo total</span>
+        <strong class="card__valor" id="saldo-total">--</strong>
+      </article>
+
+      <article class="card card--despesas" style="grid-column: 1 / -1;">
+        <span class="card__rotulo">Total de despesas</span>
+        <strong class="card__valor" id="total-despesas">--</strong>
+      </article>
+
+      <article class="card card--impulso">
+        <span class="card__rotulo">Total gasto por impulso</span>
+        <strong class="card__valor" id="total-impulso">--</strong>
+        <small>Gastos não essenciais: vale refletir antes de comprar!</small>
+      </article>
+    </section>
+
+    <!-- Extrato (array "historico" da API) -->
+    <section class="extrato" aria-label="Extrato">
+      <h2>Extrato</h2>
+      <ul class="lista" id="lista"></ul>
+      <p class="status" id="status" role="status">Carregando...</p>
+    </section>
+
+    <p class="rodape">Letramento financeiro • ODS 1 e ODS 12</p>
+  </main>
+
+  <nav class="menu" aria-label="Navegação principal">
+    <a href="index.html" class="ativo">Painel</a>
+    <a href="nova-transacao.html">+ Nova transação</a>
+  </nav>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
